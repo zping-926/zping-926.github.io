@@ -8,77 +8,70 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; background: #0f172a; color: #f8fafc; scroll-behavior: smooth; overflow-x: hidden; }
 
-        nav { background: rgba(15, 23, 42, 0.9); backdrop-filter: blur(10px); height: 80px; display: flex; justify-content: space-around; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .logo { font-size: 22px; font-weight: 700; color: #38bdf8; letter-spacing: 1px; }
+        body { font-family: 'Poppins', sans-serif; background: #fdfaf5; color: #334155; scroll-behavior: smooth; overflow-x: hidden; }
+
+
+        nav { background: rgba(253, 250, 245, 0.9); backdrop-filter: blur(10px); height: 80px; display: flex; justify-content: space-around; align-items: center; position: fixed; width: 100%; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .logo { font-size: 22px; font-weight: 700; color: #1e293b; letter-spacing: 1px; }
         nav ul { display: flex; list-style: none; }
         nav ul li { margin: 0 15px; }
-        nav ul li a { text-decoration: none; color: #94a3b8; font-weight: 500; font-size: 14px; transition: 0.3s; }
+        nav ul li a { text-decoration: none; color: #64748b; font-weight: 500; font-size: 14px; transition: 0.3s; }
         nav ul li a:hover { color: #38bdf8; }
 
-        #home { height: 100vh; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); display: flex; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; }
+        #home { height: 100vh; background: linear-gradient(135deg, #1e293b 0%, #334155 100%); display: flex; justify-content: center; align-items: center; text-align: center; position: relative; overflow: hidden; color: white; }
         .snow { position: absolute; top: -10px; color: white; user-select: none; z-index: 1; pointer-events: none; animation: fall linear infinite; }
         @keyframes fall { to { transform: translateY(105vh); } }
         .hero-content { z-index: 2; }
         .hero-content h2 { font-size: 55px; font-weight: 700; margin-bottom: 10px; }
         .hero-content h2 span { color: #38bdf8; }
-        .typing-text { font-size: 22px; font-weight: 300; color: #94a3b8; }
+        .typing-text { font-size: 22px; font-weight: 300; color: #cbd5e1; }
 
-        section { padding: 120px 20px; max-width: 1100px; margin: 0 auto; }
-        .section-title { text-align: center; margin-bottom: 60px; }
-        .section-title h2 { font-size: 32px; color: #f1f5f9; position: relative; display: inline-block; }
+        section { padding: 100px 20px; max-width: 1100px; margin: 0 auto; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 32px; color: #1e293b; position: relative; display: inline-block; }
         .section-title h2::after { content: ''; width: 60%; height: 3px; background: #38bdf8; position: absolute; bottom: -10px; left: 20%; }
 
-        .skills-container { max-width: 700px; margin: 0 auto; background: rgba(30, 41, 59, 0.5); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        .about-box { text-align: center; max-width: 800px; margin: 0 auto 40px; line-height: 1.8; color: #475569; font-size: 16px; }
+
+    
+        .skills-container { max-width: 700px; margin: 0 auto; background: #1e293b; padding: 40px; border-radius: 25px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid rgba(56, 189, 248, 0.2); }
         .skill-box { margin-bottom: 25px; }
-        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 500; color: #cbd5e1; }
+        .skill-info { display: flex; justify-content: space-between; margin-bottom: 8px; font-weight: 500; color: #f8fafc; }
         .progress-line { height: 8px; width: 100%; background: #334155; border-radius: 10px; position: relative; }
-        .progress-line span { height: 100%; background: linear-gradient(90deg, #38bdf8, #818cf8); border-radius: 10px; position: absolute; left: 0; animation: animate 2s cubic-bezier(1,0,0.5,1) forwards; }
+        .progress-line span { height: 100%; background: linear-gradient(90deg, #38bdf8, #818cf8); border-radius: 10px; position: absolute; left: 0; animation: animate 2s forwards; }
         @keyframes animate { from { width: 0; } }
 
         .edu-wrapper { position: relative; padding: 40px 0; }
-        .edu-wrapper::before { content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: rgba(56, 189, 248, 0.2); top: 0; }
-        .edu-card { width: 45%; margin-bottom: 40px; position: relative; background: rgba(30, 41, 59, 0.7); padding: 25px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-        .edu-card:hover { border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.1); }
+        .edu-wrapper::before { content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: #cbd5e1; top: 0; }
+        .edu-card { width: 45%; margin-bottom: 40px; position: relative; background: #1e293b; padding: 30px; border-radius: 20px; color: white; border: 1px solid rgba(56, 189, 248, 0.1); transition: 0.3s; }
+        .edu-card:hover { border-color: #38bdf8; transform: translateY(-5px); box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2); }
         .edu-card.left { float: left; text-align: right; }
         .edu-card.right { float: right; text-align: left; }
-        .edu-card::after { content: ''; position: absolute; width: 12px; height: 12px; background: #38bdf8; border-radius: 50%; top: 30px; box-shadow: 0 0 10px #38bdf8; }
-        .edu-card.left::after { right: -56px; }
-        .edu-card.right::after { left: -56px; }
+        .edu-card::after { content: ''; position: absolute; width: 14px; height: 14px; background: #38bdf8; border-radius: 50%; top: 35px; box-shadow: 0 0 10px #38bdf8; border: 2px solid white; }
+        .edu-card.left::after { right: -57px; }
+        .edu-card.right::after { left: -57px; }
         .edu-card h3 { color: #38bdf8; font-size: 18px; margin-bottom: 5px; }
-        .edu-card span { font-size: 13px; color: #94a3b8; }
         .edu-wrapper::after { content: ""; display: table; clear: both; }
 
-        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .course-item { 
-            position: relative; height: 250px; border-radius: 20px; overflow: hidden; 
-            text-decoration: none; border: 1px solid rgba(255,255,255,0.05); transition: 0.5s; 
-        }
-        .course-item .bg-img { 
-            position: absolute; width: 100%; height: 100%; object-fit: cover; 
-            filter: brightness(0.4); transition: 0.5s; 
-        }
-        .course-item:hover .bg-img { transform: scale(1.1); filter: brightness(0.6) blur(2px); }
-        .course-info { 
-            position: absolute; bottom: 0; width: 100%; padding: 25px; 
-            background: linear-gradient(transparent, rgba(15, 23, 42, 0.9)); 
-            z-index: 2; transition: 0.3s;
-        }
-        .course-item:hover .course-info { padding-bottom: 40px; }
-        .course-info h3 { font-size: 20px; color: #fff; margin-bottom: 5px; }
-        .course-info p { font-size: 14px; color: #38bdf8; font-weight: 500; }
+        .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 25px; }
+        .course-item { position: relative; height: 260px; border-radius: 20px; overflow: hidden; text-decoration: none; border: 1px solid rgba(0,0,0,0.05); transition: 0.5s; }
+        .course-item .bg-img { position: absolute; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.5); transition: 0.5s; }
+        .course-item:hover .bg-img { transform: scale(1.1); filter: brightness(0.7); }
+        .course-info { position: absolute; bottom: 0; width: 100%; padding: 20px; background: linear-gradient(transparent, rgba(0,0,0,0.8)); color: white; }
+        .course-info h3 { font-size: 18px; margin-bottom: 5px; }
+        .course-info p { font-size: 13px; color: #38bdf8; font-weight: 500; }
 
-    
+
         .profile-links { display: flex; justify-content: center; gap: 40px; margin-top: 30px; }
-        .profile-links a { color: #94a3b8; font-size: 30px; transition: 0.3s; }
+        .profile-links a { color: #475569; font-size: 30px; transition: 0.3s; }
         .profile-links a:hover { color: #38bdf8; transform: translateY(-5px); }
-        footer { text-align: center; padding: 60px; color: #475569; font-size: 13px; border-top: 1px solid rgba(255,255,255,0.05); }
+        footer { text-align: center; padding: 60px; color: #94a3b8; font-size: 13px; background: #1e293b; color: white; }
 
         @media (max-width: 768px) {
             .edu-wrapper::before { left: 20px; }
-            .edu-card { width: 90%; float: none !important; text-align: left !important; margin-left: 45px; }
-            .edu-card::after { left: -31px !important; }
+            .edu-card { width: 85%; float: none !important; text-align: left !important; margin-left: 45px; }
+            .edu-card::after { left: -32px !important; }
         }
     </style>
 </head>
@@ -88,7 +81,7 @@
         <div class="logo">WONG ZI PING</div>
         <ul>
             <li><a href="#home">Home</a></li>
-            <li><a href="#about">Skills</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#education">Journey</a></li>
             <li><a href="#courses">Courses</a></li>
             <li><a href="#profiles">Connect</a></li>
@@ -103,6 +96,11 @@
     </section>
 
     <section id="about">
+        <div class="section-title"><h2>About Me</h2></div>
+        <div class="about-box">
+            <p>I am a First Year Data Engineering student at UTM. Passionate about leveraging data and technology to build meaningful solutions. My journey involves exploring the world of programming, data structures, and web development to solve real-world challenges.</p>
+        </div>
+
         <div class="section-title"><h2>Technical Stack</h2></div>
         <div class="skills-container">
             <div class="skill-box">
@@ -162,6 +160,13 @@
                     <p>Discrete Structure</p>
                 </div>
             </a>
+            <a href="https://github.com/zping-926/1-SECPH/tree/main/SECR1013" class="course-item">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" class="bg-img">
+                <div class="course-info">
+                    <h3>SECR1013</h3>
+                    <p>Digital Logic</p>
+                </div>
+            </a>
             <a href="https://github.com/zping-926/1-SECPH/tree/main/SECJ1013" class="course-item">
                 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" class="bg-img">
                 <div class="course-info">
@@ -195,8 +200,6 @@
                 setTimeout(type, 100);
             }
         }
-        
-  
         function createSnow() {
             const snowContainer = document.getElementById('home');
             const snowflake = document.createElement('div');
@@ -209,7 +212,6 @@
             snowContainer.appendChild(snowflake);
             setTimeout(() => { snowflake.remove(); }, 5000);
         }
-
         window.onload = () => {
             type();
             setInterval(createSnow, 100);
